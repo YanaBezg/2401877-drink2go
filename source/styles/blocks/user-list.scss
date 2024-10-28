@@ -1,0 +1,88 @@
+.user-list {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0 0 0 auto;
+  list-style: none;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: wrap;
+    max-width: 300px;
+    order: 2;
+  }
+}
+
+
+@media (min-width: 1440px) {
+    .user-list__item:first-child {
+        margin-right: 20px;
+    }
+}
+
+
+.user-list__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 22px;
+  color: $base-black;
+
+  @media (min-width: $tablet-width) {
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-family: $font-medium;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    gap: 8px;
+
+  }
+
+  &:hover {
+    color: $base-primary;
+  }
+
+  &:focus {
+    color: $base-primary;
+  }
+
+  &:active {
+    background-color: $base-secondary;
+
+    @media (min-width: $tablet-width) {
+      color: $base-primary;
+    }
+  }
+}
+
+.user-list__toggle {
+  position: relative;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background-position: center;
+  background-color: transparent;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.user-list__text {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+  }
+}

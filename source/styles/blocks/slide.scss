@@ -1,0 +1,129 @@
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide--active {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px 80px 84px 105px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    gap: 30px;
+    justify-items: flex-start;
+  }
+}
+
+.slide__picture {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}
+
+.slide__image {
+  display: block;
+  object-fit: cover;
+}
+
+.slide__text {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+}
+
+.slide__badge {
+  margin: 0 0 4px;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.slide__title {
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  margin: 0 0 10px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
+}
+
+.slide__description {
+  text-align: center;
+  margin: 0 0 20px;
+  min-height: 100px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    min-height: 96px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+
+.slide__buy-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.slide__price {
+  line-height: 32px;
+}
+
+.slide__price--old {
+  color: $base-primary;
+  font-size: 16px;
+  text-decoration-line: line-through;
+  margin-right: 6px;
+}
+
+.slide__price--new {
+  font-size: 20px;
+  font-weight: 600;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
+
+.slide__button {
+  margin-left: 20px;
+  min-width: 113px;
+  min-height: 40px;
+  padding: 5px 10px;
+}

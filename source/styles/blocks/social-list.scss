@@ -1,0 +1,33 @@
+.social-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  gap: 20px;
+}
+
+.social-list__item-link {
+  display: block;
+  padding: 10px;
+  height: 40px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: $base-grey;
+  max-width: 40px;
+
+  &:hover {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+
+  &:focus {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+}

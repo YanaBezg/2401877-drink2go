@@ -1,0 +1,78 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $base-white;
+  padding: 40px 20px 20px 18px;
+  border-radius: 4px;
+
+  @media (min-width: $tablet-width) {
+    padding: 50px 30px 30px 30px;
+  }
+}
+
+.card__link {
+  text-decoration: none;
+  color: $base-black;
+}
+
+.card__link--image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.card__title {
+  font-family: $font-bold;
+  font-size: 18px;
+  line-height: 32px;
+  margin: 0 0 4px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+}
+
+.card__description {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.card__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__price {
+  font-family: $font-semi-bold;
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.card__button {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.card__button::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 16px;
+  background-image: url("../../icons/basket-card.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-right: 6px;
+}

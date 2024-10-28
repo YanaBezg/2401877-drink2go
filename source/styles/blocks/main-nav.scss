@@ -1,0 +1,118 @@
+.main-nav {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 40px;
+  }
+}
+
+.main-nav--closed .user-list__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/burger.svg");
+  top: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+
+  &:active {
+    background-color: $base-secondary;
+  }
+}
+
+.main-nav--opened .user-list__toggle::before {
+  content: "";
+  position: absolute;
+  background-image: url("../../icons/burger-close.svg");
+  top: 0;
+  left: 0;
+  margin: auto;
+  right: 0;
+  bottom: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.main-nav--nojs .user-list__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__container {
+  position: static;
+  min-height: 0;
+}
+
+.main-nav--nojs .site-list__item {
+  display: block;
+}
+
+.main-nav--closed .site-list__item {
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
+}
+
+.main-nav--opened .site-list {
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 60px;
+    z-index: 100;
+    background-color: $base-white;
+  }
+}
+
+.main-nav__container {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    display: contents;
+  }
+}
+
+.main-nav__logo {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-family: $font-regular;
+    font-size: 12px;
+    line-height: 16px;
+    color: $base-black;
+    text-decoration: none;
+  }
+}
+
+.main-nav__logo-icon {
+  @media (min-width: $desktop-width) {
+    margin-right: 20px;
+  }
+}
+
+.main-nav__logo-title {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 126px;
+  }
+}

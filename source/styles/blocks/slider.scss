@@ -1,0 +1,79 @@
+.slider__button {
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  width: 11px;
+  height: 20px;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    top: 40%;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 52%;
+  }
+}
+
+.slider__button-prev {
+  background-image: url("../../icons/slider-arrow-left.svg");
+  left: 4px;
+
+  @media (min-width: $tablet-width) {
+    left: 34px;
+  }
+}
+
+.slider__button-next {
+  background-image: url("../../icons/slider-arrow-right.svg");
+  right: 4px;
+
+  @media (min-width: $tablet-width) {
+    right: 34px;
+  }
+}
+
+.slider__button-prev[aria-disabled="true"],
+.slider__button-next[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.slider__pagination {
+  position: absolute;
+  bottom: 60px;
+  width: 202px;
+  height: 24px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.slider__button-pagination {
+  padding: 0;
+  margin: 0;
+  width: 62px;
+  height: 4px;
+  border-radius: 0;
+  background-color: $base-white;
+  opacity: 1;
+  outline: 0;
+  position: relative;
+  border: none;
+}
+
+.slider__button-pagination.active {
+  background-color: $base-primary;
+  pointer-events: none;
+}

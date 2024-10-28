@@ -1,1 +1,43 @@
-/* здесь используйте глобальные селекторы img, body, html и так далее */
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-regular;
+  color: $base-black;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+picture {
+  display: contents;
+}
+
+.badge {
+  font-family: $font-bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: $base-primary;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.title-h2 {
+  font-family: $font-bold;
+  color: $base-black;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+  }
+}

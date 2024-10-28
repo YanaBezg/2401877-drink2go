@@ -1,0 +1,120 @@
+.range {
+  @media (min-width: $tablet-width) {
+    max-width: 223px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 318px;
+  }
+}
+
+.range__controls {
+  position: relative;
+  padding: 11px 0;
+  border-radius: 5px;
+  margin-bottom: 23px;
+  // user-select: none;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.range__scale {
+  height: 4px;
+  background-color: $light-grey;
+}
+
+.range__bar {
+  margin-left: 11px;
+  width: 86%;
+  height: 4px;
+  background-color: $primary-lighter;
+}
+
+.range__toggle {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 50%;
+  border: 2px solid $primary-lighter;
+  background-color: $base-white;
+  cursor: pointer;
+}
+
+.range__toggle--max {
+  left: 86%;
+}
+
+.range__toggle:focus::after,
+.range__toggle:hover::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $primary-opacity;
+}
+
+.range__price-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, min-content);
+  column-gap: 44px;
+  justify-content: space-between;
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    column-gap: 50px;
+  }
+}
+
+.range__price {
+  width: 118px;
+  padding: 6px 10px;
+  text-align: center;
+  color: $base-black;
+  border: 2px solid $primary-lighter;
+  border-radius: 4px;
+  background-color: $base-white;
+  font-family: $font-medium;
+  font-size: 16px;
+  line-height: 24px;
+
+  @media (min-width: $tablet-width) {
+    width: 87px;
+    padding: 8px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 134px;
+    padding: 6px 10px;
+  }
+}
+
+.range__price-wrapper input[type=number] {
+  appearance: textfield;
+}
+
+.range__price--min-price {
+  color: $base-grey;
+}
+
+.range__price-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 8px;
+  height: 2px;
+  background-color: $base-grey;
+}
+
+

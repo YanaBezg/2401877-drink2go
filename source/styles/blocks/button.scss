@@ -1,0 +1,48 @@
+.button {
+  display: inline-block;
+  font-family: $font-regular;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  color: $base-white;
+  background-color: $base-primary;
+  cursor: pointer;
+  text-align: center;
+
+  &:hover {
+    background-color: $primary-lighter;
+  }
+
+  &:focus {
+    background-color: $primary-lighter;
+  }
+
+  &:active {
+    background-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $base-grey;
+  }
+}
+
+.button-apply {
+  @media (min-width: $tablet-width) {
+    min-width: 137px;
+  }
+}
+
+.button-reset {
+  color: $base-primary;
+  background-color: $base-white;
+
+  &:disabled {
+    background-color: $light-grey;
+  }
+
+  @media (min-width: $tablet-width) {
+    min-width: 120px;
+  }
+}
